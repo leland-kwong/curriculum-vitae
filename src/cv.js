@@ -42,12 +42,22 @@ const html = (strings, ...vals) => {
 
 const Header = html`
   <header>
-    <h1 class="ma0">${content.name}</h1>
-    <div class="b">${content.title}</div>
-    <div>${content.email}</div>
+    <div class="flex items-baseline">
+      <h1 class="ma0 f3">${content.name}</h1>
+      <a
+        href="https://github.com/Leland-Kwong/curriculum-vitae"
+        class="ml4"
+      >
+        &lt;resume source&gt;
+      </a>
+    </div>
+    <div class="f4">${content.title}</div>
+    <div>
+      <a href="mailto:${content.email}">${content.email}</a>
+    </div>
     <div class="flex">
       ${content.webPresence.map(({ desc, link }) => html`
-        <div class="mr3">
+        <div class="comma-seperated">
           <a href="${link}">${desc}</a>
         </div>
       `)}
@@ -82,6 +92,7 @@ const WorkExperience = () => {
     date,
     role,
     summary = '',
+    techStack = [],
     responsibilities
   }) => {
     const ResponsibilitiesList = responsibilities.length
@@ -93,23 +104,63 @@ const WorkExperience = () => {
         </ul>
       `
       : '';
+
+    const { start, end } = date;
+    const [m1, y1] = start.split('/');
+    const [m2, y2] = end.split('/');
+    const d1 = new Date(`${m1}/01/${y1}`);
+    const d2 = new Date(`${m2}/01/${y2}`);
+    const totalMonths = Math.round(
+      (d2 - d1) / 1000 / 60 / 60 / 24 / 30
+    );
+    const years = Math.floor(totalMonths / 12);
+    const months = totalMonths % 12;
+    const yearText = years ? years + 'yr ' : '';
+    const monthText = months ? months + 'mos' : '';
     const WorkDates = html`
-      <time>${date.start}</time>
-      <span>-</span>
-      <time>${date.end}</time>
+      <div>
+        <time>${date.start}</time>
+        <span>-</span>
+        <time>${date.end}</time>
+        <span> ∙ </span>
+        <span>${yearText}${monthText}</span>
+      </div>
     `;
+    const TechStack = html`
+      <div class="TechStack">
+        <div class="ttu f7">
+          Tech Stack
+        </div>
+        <ul class="flex list pl0 mt1">
+          ${techStack.map(stack => html`
+            <li class="TechStack__Item">${stack}</li>
+          `)}
+        </ul>
+      </div>
+    `;
+    const CompanyNameClasses = 'CompanyName';
+    const CompanyName = website
+      ? html`
+        <a href="${website}" class="${CompanyNameClasses}">
+          <strong>${company}</strong>
+        </a>
+      `
+      : html`
+        <strong class="${CompanyNameClasses}">
+          ${company}
+        </strong>
+      `;
     return html`
-      <ul class="ExperienceMeta list pl0">
-        <li>
-          <a href="${website}" class="CompanyName f4">
-            <strong>${company}</strong>
-          </a>
-        </li>
-        <li>${WorkDates}</li>
-        <li>${role}</li>
-      </ul>
-      <p>${summary}</p>
-      ${ResponsibilitiesList}
+      <div class="mb4">
+        <ul class="ExperienceMeta list pl0">
+          <li>${CompanyName}</li>
+          <li class="i">${role}</li>
+          <li>${WorkDates}</li>
+        </ul>
+        <p>${summary}</p>
+        ${TechStack}
+        ${ResponsibilitiesList}
+      </div>
     `;
   });
   return exp;
@@ -121,17 +172,23 @@ const Education = () => Section(
 <ul class="list pl0">
   ${content.education.map(({
     school,
+    degree,
     years: [yearStart, yearEnd],
     education,
-  }) => html`
-    <li class="mb2">
-      <div class="f4 b">${school}</div>
-      <div>${education}</div>
-      <time>${yearStart}</time>
-      <span>-</span>
-      <time>${yearEnd}</time>
-    </li>
-  `)}
+  }) => {
+    return html`
+      <li class="mb4">
+        <div class="b">${school}</div>
+        <div class="i">${degree}</div>
+        <div>${education}</div>
+        <div>
+          <time>${yearStart}</time>
+          <span>-</span>
+          <time>${yearEnd}</time>
+        </div>
+      </li>
+    `;
+  })}
 </ul>
   `);
 
@@ -147,10 +204,10 @@ const htmlContent = html`
     html`<p>${content.summary}</p>`
   )}
   ${Section(
-    'work experience',
+    'experience',
     WorkExperience()
   )}
   ${Education()}
-`;
+  `;
 
 render(htmlContent);

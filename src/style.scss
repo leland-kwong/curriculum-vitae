@@ -21,14 +21,37 @@ body {
     content: "";
     display: block;
     border-bottom: 2px solid currentColor;
-    padding-bottom: .4em;
+    padding-bottom: .2em;
   }
 }
 
 a {
   color: rgb(6, 119, 201);
+  text-decoration: none;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: calc(100% - .1em);
+    left: 0;
+    right: 0;
+    border-bottom: 3px solid currentColor;
+    opacity: .3;
+  }
 }
 
 .CompanyName {
   color: inherit;
+}
+
+.TechStack__Item {
+  margin-right: .3em;
+  background: rgb(236, 235, 235);
+  // border: 1px solid rgb(199, 199, 199);
+  padding: 0 .25em;
+}
+
+.comma-seperated:not(:first-child):before {
+  content: ",";
 }

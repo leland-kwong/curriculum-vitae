@@ -8,8 +8,8 @@ const config = {
   output: {
     filename: 'bundle.js',
   },
-  devServer: {
-  },
+  devServer: {},
+  devtool: 'cheap-module-eval-source-map',
   module: {
     rules: [
       {

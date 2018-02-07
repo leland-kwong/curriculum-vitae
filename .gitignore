@@ -1,0 +1,6 @@
+**/*.next
+**/rethinkdb_data
+.env
+**/node_modules
+.DS_Store
+**/tmp

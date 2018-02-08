@@ -1,7 +1,11 @@
 export default {
   name: 'Leland Kwong',
-  email: 'leland.kwong@gmail.com',
   title: 'full-stack javascript developer',
+  website: 'lelandkwong.com',
+  contactInfo: {
+    email: 'leland.kwong@gmail.com',
+    phone: '415-326-6018',
+  },
   webPresence: [
     {
       desc: 'github',
@@ -12,13 +16,36 @@ export default {
       link: 'https://codepen.io/LelandKwong/'
     },
     {
-      desc: 'personal site',
-      link: 'https://lelandkwong.com'
+      desc: 'linkedIn',
+      link: 'https://www.linkedin.com/in/lelandkwong/'
     },
   ],
-  summary: 'I am a t-shaped web developer with a penchant for delightful UX and beautiful design. I believe that great software isn’t just about pixel-perfect designs and clean code, but it should also have a top-notch user experience to match. I bring a sense of empathy to my work which allows me to smoothly communicate between project managers, designers and engineers alike. I thrive in environments that encourage out-of-the-box thinking and cross-disciplinary collaboration. To me, the web is a canvas on which I can craft products that people will love to use.',
+  recentProjects: [
+    'https://unicodelist.io'
+  ],
+  summary: 'I am a t-shaped developer with a penchant for delightful UX and beautiful design. I believe that great software is the result of multidisciplinary collaboration. To me, the web is a canvas on which I can craft products that people will love to use.',
   coreCompentencies: [],
   experience: [
+    {
+      company: 'Sabbatical',
+      role: 'full-stack javascript developer',
+      date: {
+        start: '3/2017'
+      },
+      techStack: [
+        'Next.js',
+        'Express.js',
+        'Elastic search',
+        'RethinkDB',
+        'MongoDB',
+        'LevelDB',
+        'React',
+        'PostCSS',
+        'Webpack',
+        'Node.js',
+        'Jest'
+      ]
+    },
     {
       company: 'Awake Security',
       website: 'awakesecurity.com',
@@ -77,9 +104,6 @@ export default {
       ],
       responsibilities: [
         'Architected and developed core CSS using LESS preprocessor',
-        'Co-developed core Javascript',
-        'Build and design reusable web components',
-        'Technologies used include: AngularJS, vanilla Javascript, jQuery, LESS css, Mustache.js, Highcharts.js',
         'Mentor and assist engineering team on CSS / UX best practices',
         'Collaborate with Project Management, Engineering Team, and Designers'
       ]
@@ -102,6 +126,14 @@ export default {
         'jQuery and vanilla JS development',
       ]
     }
+  ],
+  interestsAndHobbies: [
+    'interaction design',
+    'art',
+    'hiking',
+    'mountain biking',
+    'video games',
+    'personal development'
   ],
   education: [
     {

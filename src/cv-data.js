@@ -23,25 +23,26 @@ export default {
   recentProjects: [
     'https://unicodelist.io'
   ],
-  summary: 'I am a t-shaped developer with a penchant for delightful UX and beautiful design. I believe that great software is the result of multidisciplinary collaboration. To me, the web is a canvas on which I can craft products that people will love to use.',
+  summary: 'I am a t-shaped developer with a penchant for delightful UX and beautiful design. I believe that great software is the combined result of multiple disciplines. To me, the web is a canvas on which I can craft products that people will love to use.',
   coreCompentencies: [],
   experience: [
     {
       company: 'Sabbatical',
-      role: 'full-stack javascript developer',
+      role: 'product designer',
       date: {
         start: '3/2017'
       },
       techStack: [
+        'React',
+        'GraphQL',
         'Next.js',
         'Express.js',
+        'PostCSS',
+        'Webpack',
         'Elastic search',
         'RethinkDB',
         'MongoDB',
         'LevelDB',
-        'React',
-        'PostCSS',
-        'Webpack',
         'Node.js',
         'Jest'
       ]

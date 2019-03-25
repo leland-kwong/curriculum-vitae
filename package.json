@@ -11,10 +11,10 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^7.2.5",
-    "babel-core": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.1",
     "babel-loader": "^7.1.2",
-    "css-loader": "^0.28.9",
+    "css-loader": "^2.1.1",
     "eslint": "^4.17.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-babel": "^4.1.2",
@@ -24,14 +24,15 @@
     "eslint-plugin-react": "^7.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "glob": "^7.1.2",
-    "node-sass": "^4.7.2",
+    "node-sass": "^4.11.0",
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.1.0",
     "raw-loader": "^0.5.1",
     "sass-loader": "^6.0.6",
     "tachyons": "^4.9.1",
     "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.11.1"
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^2.9.1"
   },
   "dependencies": {}
 }

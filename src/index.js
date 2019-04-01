@@ -33,7 +33,7 @@ const html = (strings, ...vals) => {
   }).join('');
 };
 
-const CVSource = html`
+const CVSource = html /*html*/`
   <a
     href="https://github.com/Leland-Kwong/curriculum-vitae"
   >
@@ -43,18 +43,20 @@ const CVSource = html`
 
 const Link = ({ href, content }) => {
   const isEmail = href.indexOf('@') !== -1;
-  return html`
-    <a href="${isEmail && 'mailto:'}${href}">${content}</a>
+  return html /*html*/`
+    <a href="${isEmail ? 'mailto:' : ((href.indexOf('http') === -1) ? 'https://' : '')}${href}">
+      ${content}
+    </a>
   `;
 };
 
-const Header = html`
+const Header = html /*html*/`
   <header class="flex justify-between">
     <div>
-      <h1 class="ma0 f3">${content.name}</h1>
-      <div class="ttc">${content.title}</div>
+      <h1 class="full-name ma0 f3">${content.name}</h1>
+      <div class="headline i ttc">${content.title}</div>
       <div class="flex">
-        ${content.webPresence.map(({ desc, link }) => html`
+        ${content.webPresence.map(({ desc, link }) => html /*html*/`
           <div class="comma-seperated">
             <a href="${link}">${desc}</a>
           </div>
@@ -62,39 +64,42 @@ const Header = html`
       </div>
       <div>${CVSource}</div>
     </div>
-    <ul class="list pl0 ma0">
+    <ul class="profile-meta list pl0 ma0">
       <li>
-        <span class="w4-ns dib tr">e</span>
+        <span class="w4-ns dib tr gray">email: </span>
         ${Link({
           href: content.contactInfo.email,
           content: content.contactInfo.email
         })}
       </li>
       <li>
-        <span class="w4-ns dib tr">w</span>
-        <a href="${content.website}">${content.website}</a>
+        <span class="w4-ns dib tr gray">web: </span>
+        ${Link({
+          href: content.website,
+          content: content.website
+        })}
       </li>
       <li>
-        <span class="w4-ns dib tr">p</span>
+        <span class="w4-ns dib tr gray">phone: </span>
         <span>${content.contactInfo.phone}</span>
       </li>
     </ul>
   </header>
 `;
 
-const Style = (css = '') => html`
+const Style = (css = '') => html /*html*/`
   <style>${css}</style>
 `;
 
 const Section = (title, content) => {
   const SectionTitle = title
-    ? html`
+    ? html /*html*/`
       <h3 class="SectionTitle ttu f5 tracked">
         ${title}
       </h3>
     `
     : '';
-  return html`
+  return html /*html*/`
     <section class="Section">
       ${SectionTitle}
       ${content}
@@ -121,12 +126,12 @@ const WorkDates = (date) => {
   const { start, end } = date;
 
   const DateSummary = end
-    ? html`
+    ? html /*html*/`
       <span> ∙ </span>
       <span>${WorkDatesSummary({ start, end })}</span>
     `
     : '';
-  return html`
+  return html /*html*/`
     <div>
       <time>${start}</time>
       <span>-</span>
@@ -147,9 +152,9 @@ const WorkExperience = () => {
     responsibilities = []
   }) => {
     const ResponsibilitiesList = responsibilities.length
-      ? html`
+      ? html /*html*/`
         <ul>
-          ${responsibilities.map(r => html`
+          ${responsibilities.map(r => html /*html*/`
             <li>${r}</li>
           `)}
         </ul>
@@ -157,13 +162,13 @@ const WorkExperience = () => {
       : '';
 
 
-    const TechStack = html`
+    const TechStack = html /*html*/`
       <div class="TechStack">
         <div class="ttu f7">
           Tech Stack
         </div>
         <ul class="flex flex-wrap list pl0 mt1">
-          ${techStack.map(stack => html`
+          ${techStack.map(stack => html /*html*/`
             <li class="Tag bg-light-gray">${stack}</li>
           `)}
         </ul>
@@ -171,22 +176,22 @@ const WorkExperience = () => {
     `;
     const CompanyNameClasses = 'CompanyName color-inherit';
     const CompanyName = website
-      ? html`
+      ? html /*html*/`
         <a href="${website}" class="${CompanyNameClasses}">
           ${company}
         </a>
       `
-      : html`
+      : html /*html*/`
         <div class="${CompanyNameClasses}">
           ${company}
         </div>
       `;
-    return html`
+    return html /*html*/`
       <div class="ExperienceBlock mb4">
         <ul class="ExperienceMeta list pl0">
           <li class="ttc f4 fw6">${role}</li>
           <li>${CompanyName}</li>
-          <li>${WorkDates(date)}</li>
+          <li class="work-date gray">${WorkDates(date)}</li>
         </ul>
         <p>${summary}</p>
         ${TechStack}
@@ -199,7 +204,7 @@ const WorkExperience = () => {
 
 const Education = () => Section(
   'education',
-  html`
+  html /*html*/`
 <ul class="list pl0">
   ${content.education.map(({
     school,
@@ -207,7 +212,7 @@ const Education = () => Section(
     years: [yearStart, yearEnd],
     education,
   }) => {
-    return html`
+    return html /*html*/`
       <li class="mb4">
         <div class="ttc f4 fw6">${school}</div>
         <div class="i">${degree}</div>
@@ -223,9 +228,9 @@ const Education = () => Section(
 </ul>
 `);
 
-const OtherInterests = (items = []) => html`
+const OtherInterests = (items = []) => html /*html*/`
   <ul class="list pl0 flex flex-wrap">
-    ${items.map(item => html`
+    ${items.map(item => html /*html*/`
       <li class="Tag bg-washed-red">${item}</li>
     `)}
   </ul>
@@ -239,7 +244,7 @@ const htmlContent = html`
   )}
   ${Section(
     null,
-    html`<p>${content.summary}</p>`
+    html /*html*/`<p>${content.summary}</p>`
   )}
   ${Section(
     'experience',

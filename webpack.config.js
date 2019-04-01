@@ -8,8 +8,8 @@ const config = {
   output: {
     filename: 'bundle.js',
   },
-  devServer: {
-  },
+  devServer: {},
+  devtool: 'cheap-module-eval-source-map',
   module: {
     rules: [
       {
@@ -26,7 +26,7 @@ const config = {
       },
       {
         test: /\.s(a|c)ss$/,
-        use: ['babel-loader', 'raw-loader', 'postcss-loader',
+        use: ['babel-loader', 'raw-loader',
           { loader: 'sass-loader',
             options: {
               includePaths: ['styles', 'node_modules']
@@ -34,7 +34,8 @@ const config = {
                 .map((g) => glob.sync(g))
                 .reduce((a, c) => a.concat(c), [])
             }
-          }
+          },
+          'postcss-loader'
         ]
       }
     ]

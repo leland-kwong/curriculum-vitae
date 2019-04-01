@@ -49,7 +49,7 @@ export default {
     },
     {
       company: 'Awake Security',
-      website: 'awakesecurity.com',
+      website: 'https://awakesecurity.com',
       role: 'frontend developer',
       date: {
         start: '8/2015',
@@ -71,7 +71,7 @@ export default {
     },
     {
       company: 'Plastiq',
-      website: 'plastiq.com',
+      website: 'https://plastiq.com',
       role: 'UX engineer',
       date: {
         start: '10/2014',
@@ -89,7 +89,7 @@ export default {
     },
     {
       company: 'Netskope',
-      website: 'netskope.com',
+      website: 'https://netskope.com',
       role: 'frontend developer',
       date: {
         start: '2/2013',
@@ -134,18 +134,14 @@ export default {
     'hiking',
     'mountain biking',
     'video games',
-    'personal development'
+    'personal development',
+    'game development'
   ],
   education: [
     {
       school: 'San Francisco State University',
       degree: 'Bachelor of Arts, Product Design',
       years: [2002, 2005]
-    },
-    {
-      school: 'De Anza College',
-      degree: 'Associates, General education',
-      years: [2000, 2002]
     }
   ]
 };

@@ -37,7 +37,7 @@ const CVSource = html`
   <a
     href="https://github.com/Leland-Kwong/curriculum-vitae"
   >
-    &lt;resume source&gt;
+    &lt;view source&gt;
   </a>
 `;
 

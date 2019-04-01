@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/Leland-Kwong/curriculum-vitae",
   "scripts": {
-    "start:dev": "webpack-dev-server"
+    "start": "webpack-dev-server"
   },
   "author": "",
   "license": "ISC",

@@ -27,10 +27,30 @@ export default {
   coreCompentencies: [],
   experience: [
     {
-      company: 'Sabbatical',
-      role: 'product designer',
+      company: 'LK Games',
+      role: 'Game Developer',
       date: {
         start: '3/2017'
+      },
+      techStack: [
+        'Lua language',
+        'Game Maker Language'
+      ],
+      summary: /*markdown*/`
+  Features include:
+
+  * Boids ai behavior for flocking and local avoidance
+  * Procedurally generated items (weapons, consumables, armor...)
+  * Procedurally generated environment and enemy groups
+  * Expansive passive skill tree
+`
+    },
+    {
+      company: 'Independent Contractor',
+      role: 'Full-stack javascript developer',
+      date: {
+        start: '6/2017',
+        end: '4/2018'
       },
       techStack: [
         'React',
@@ -39,10 +59,7 @@ export default {
         'Express.js',
         'PostCSS',
         'Webpack',
-        'Elastic search',
-        'RethinkDB',
         'MongoDB',
-        'LevelDB',
         'Node.js',
         'Jest'
       ]
@@ -64,10 +81,10 @@ export default {
         'Milligram(css framework)',
         'BEM'
       ],
-      responsibilities: [
-        'Developed and designed core features for initial mvp',
-        'Helped define and maintain UI architecture',
-      ]
+      summary: `
+* Developed and designed core features for initial mvp
+* Helped define and maintain UI architecture
+      `,
     },
     {
       company: 'Plastiq',

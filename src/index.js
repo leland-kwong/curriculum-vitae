@@ -1,5 +1,6 @@
 import css from './style.scss';
 import content from './cv-data';
+import marked from 'marked';
 
 const TYPES = {
   string: 0,
@@ -50,10 +51,10 @@ const Link = ({ href, content }) => {
   `;
 };
 
-const Header = html /*html*/`
+const Header = (content) => html /*html*/`
   <header class="flex justify-between">
     <div>
-      <h1 class="full-name ma0 f3">${content.name}</h1>
+      <h1 class="full-name ma0 mb1 f3">${content.name}</h1>
       <div class="headline i ttc">${content.title}</div>
       <div class="flex">
         ${content.webPresence.map(({ desc, link }) => html /*html*/`
@@ -64,7 +65,7 @@ const Header = html /*html*/`
       </div>
       <div>${CVSource}</div>
     </div>
-    <ul class="profile-meta list pl0 ma0">
+    <ul class="profile-meta list pa0 ma0">
       <li>
         <span class="w4-ns dib tr gray">email: </span>
         ${Link({
@@ -94,7 +95,7 @@ const Style = (css = '') => html /*html*/`
 const Section = (title, content) => {
   const SectionTitle = title
     ? html /*html*/`
-      <h3 class="SectionTitle ttu f5 tracked">
+      <h3 class="SectionTitle Section_${title} ttu f5 normal tracked">
         ${title}
       </h3>
     `
@@ -141,8 +142,8 @@ const WorkDates = (date) => {
   `;
 };
 
-const WorkExperience = () => {
-  const exp = content.experience.map(({
+const WorkExperience = (cvExperienceData) => {
+  const exp = cvExperienceData.map(({
     company,
     website,
     date,
@@ -187,14 +188,14 @@ const WorkExperience = () => {
         </div>
       `;
     return html /*html*/`
-      <div class="ExperienceBlock mb4">
+      <div class="ExperienceBlock ma4 mh0">
         <ul class="ExperienceMeta list pl0">
-          <li class="ttc f4 fw6">${role}</li>
+          <li class="WorkRole ttc b f5">${role}</li>
           <li>${CompanyName}</li>
           <li class="work-date gray">${WorkDates(date)}</li>
         </ul>
-        <p>${summary}</p>
         ${TechStack}
+        <div>${marked(summary)}</div>
         ${ResponsibilitiesList}
       </div>
     `;
@@ -214,7 +215,7 @@ const Education = () => Section(
   }) => {
     return html /*html*/`
       <li class="mb4">
-        <div class="ttc f4 fw6">${school}</div>
+        <div class="ttc f5 b">${school}</div>
         <div class="i">${degree}</div>
         <div>${education}</div>
         <div>
@@ -240,7 +241,7 @@ const htmlContent = html`
   ${Style(css)}
   ${Section(
     null,
-    Header
+    Header(content)
   )}
   ${Section(
     null,
@@ -248,7 +249,7 @@ const htmlContent = html`
   )}
   ${Section(
     'experience',
-    WorkExperience()
+    WorkExperience(content.experience)
   )}
   ${Section(
     'interests & hobbies',

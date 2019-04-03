@@ -27,22 +27,41 @@ export default {
   coreCompentencies: [],
   experience: [
     {
-      company: 'Sabbatical',
-      role: 'product designer',
+      company: 'LK Games',
+      role: 'Indie Game Developer',
       date: {
-        start: '3/2017'
+        start: '3/2018'
+      },
+      techStack: [
+        'Lua language',
+        'Love2d game engine'
+      ],
+      summary: /*markdown*/`
+        Working on [Citizen of Nowhere](https://lk-games.itch.io/citizen-of-nowhere), an action role playing game.
+
+        Features include:
+
+        * Boids ai behavior for flocking and local avoidance
+        * Procedurally generated items (weapons, consumables, armor...)
+        * Procedurally generated environment and enemy groups
+        * Expansive passive skill tree`
+    },
+    {
+      company: 'Independent Contractor',
+      role: 'Full-stack javascript developer',
+      date: {
+        start: '6/2017',
+        end: '4/2018'
       },
       techStack: [
         'React',
         'GraphQL',
         'Next.js',
         'Express.js',
+        'SASS',
         'PostCSS',
         'Webpack',
-        'Elastic search',
-        'RethinkDB',
         'MongoDB',
-        'LevelDB',
         'Node.js',
         'Jest'
       ]
@@ -57,17 +76,16 @@ export default {
       },
       techStack: [
         'React',
-        'PostCSS',
+        'SASS',
         'Webpack',
         'Node.js',
         'Jest testing',
         'Milligram(css framework)',
         'BEM'
       ],
-      responsibilities: [
-        'Developed and designed core features for initial mvp',
-        'Helped define and maintain UI architecture',
-      ]
+      summary: `
+        * Developed and designed core features for initial mvp
+        * Helped define and maintain UI architecture`,
     },
     {
       company: 'Plastiq',
@@ -111,7 +129,7 @@ export default {
     },
     {
       company: 'Freelance web development',
-      role: 'frontend developer and designer',
+      role: 'frontend developer',
       date: {
         start: '4/2012',
         end: '5/2013'
@@ -130,7 +148,7 @@ export default {
   ],
   interestsAndHobbies: [
     'interaction design',
-    'art',
+    'art (digital and traditional)',
     'hiking',
     'mountain biking',
     'video games',

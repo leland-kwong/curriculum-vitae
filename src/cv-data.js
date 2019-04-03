@@ -34,9 +34,11 @@ export default {
       },
       techStack: [
         'Lua language',
-        'Game Maker Language'
+        'Love2d game engine'
       ],
       summary: /*markdown*/`
+        Working on [Citizen of Nowhere](https://lk-games.itch.io/citizen-of-nowhere), an action role playing game.
+
         Features include:
 
         * Boids ai behavior for flocking and local avoidance
@@ -56,6 +58,7 @@ export default {
         'GraphQL',
         'Next.js',
         'Express.js',
+        'SASS',
         'PostCSS',
         'Webpack',
         'MongoDB',
@@ -73,7 +76,7 @@ export default {
       },
       techStack: [
         'React',
-        'PostCSS',
+        'SASS',
         'Webpack',
         'Node.js',
         'Jest testing',
@@ -126,7 +129,7 @@ export default {
     },
     {
       company: 'Freelance web development',
-      role: 'frontend developer and designer',
+      role: 'frontend developer',
       date: {
         start: '4/2012',
         end: '5/2013'
@@ -145,7 +148,7 @@ export default {
   ],
   interestsAndHobbies: [
     'interaction design',
-    'art',
+    'art (digital and traditional)',
     'hiking',
     'mountain biking',
     'video games',

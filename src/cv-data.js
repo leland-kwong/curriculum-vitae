@@ -28,22 +28,21 @@ export default {
   experience: [
     {
       company: 'LK Games',
-      role: 'Game Developer',
+      role: 'Indie Game Developer',
       date: {
-        start: '3/2017'
+        start: '3/2018'
       },
       techStack: [
         'Lua language',
         'Game Maker Language'
       ],
       summary: /*markdown*/`
-  Features include:
+        Features include:
 
-  * Boids ai behavior for flocking and local avoidance
-  * Procedurally generated items (weapons, consumables, armor...)
-  * Procedurally generated environment and enemy groups
-  * Expansive passive skill tree
-`
+        * Boids ai behavior for flocking and local avoidance
+        * Procedurally generated items (weapons, consumables, armor...)
+        * Procedurally generated environment and enemy groups
+        * Expansive passive skill tree`
     },
     {
       company: 'Independent Contractor',
@@ -82,9 +81,8 @@ export default {
         'BEM'
       ],
       summary: `
-* Developed and designed core features for initial mvp
-* Helped define and maintain UI architecture
-      `,
+        * Developed and designed core features for initial mvp
+        * Helped define and maintain UI architecture`,
     },
     {
       company: 'Plastiq',

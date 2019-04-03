@@ -1,6 +1,7 @@
 import css from './style.scss';
 import content from './cv-data';
 import marked from 'marked';
+import trimIndentation from './trim-indentation';
 
 const TYPES = {
   string: 0,
@@ -195,7 +196,9 @@ const WorkExperience = (cvExperienceData) => {
           <li class="work-date gray">${WorkDates(date)}</li>
         </ul>
         ${TechStack}
-        <div>${marked(summary)}</div>
+        <div>${marked(
+          trimIndentation(summary)
+        )}</div>
         ${ResponsibilitiesList}
       </div>
     `;

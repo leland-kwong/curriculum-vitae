@@ -35,14 +35,6 @@ const html = (strings, ...vals) => {
   }).join('');
 };
 
-const CVSource = html /*html*/`
-  <a
-    href="https://github.com/Leland-Kwong/curriculum-vitae"
-  >
-    &lt;view source&gt;
-  </a>
-`;
-
 const Link = ({ href, content }) => {
   const isEmail = href.indexOf('@') !== -1;
   return html /*html*/`
@@ -64,7 +56,6 @@ const Header = (content) => html /*html*/`
           </div>
         `)}
       </div>
-      <div>${CVSource}</div>
     </div>
     <ul class="profile-meta list pa0 ma0">
       <li>

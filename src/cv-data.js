@@ -1,6 +1,6 @@
 export default {
   name: 'Leland Kwong',
-  title: 'full-stack javascript developer',
+  title: 'Full-Stack Javascript Engineer',
   website: 'lelandkwong.com',
   contactInfo: {
     email: 'leland.kwong@gmail.com',
@@ -12,39 +12,60 @@ export default {
       link: 'https://github.com/Leland-Kwong'
     },
     {
-      desc: 'codepen',
-      link: 'https://codepen.io/LelandKwong/'
+      desc: 'homepage',
+      link: 'https://lelandkwong.com'
     },
     {
       desc: 'linkedIn',
       link: 'https://www.linkedin.com/in/lelandkwong/'
     },
   ],
-  recentProjects: [
-    'https://unicodelist.io'
-  ],
-  summary: 'I am a t-shaped developer with a penchant for delightful UX and beautiful design. I believe that great software is the combined result of multiple disciplines. To me, the web is a canvas on which I can craft products that people will love to use.',
+  summary: 'I am a Software Engineer focused on building applications for the web. My experience is mostly with frontend, although lately I have been spending more time with the backend. My main motivation for working on the server is to better understand how data is managed, transformed, and delivered from server to client. I enjoy functional programming and prefer working with teams that use React (strong opinion, weakly held). More importantly, I am interested in joining a team that is pragmatic, yet open to different ideas and technologies.',
   coreCompentencies: [],
   experience: [
     {
-      company: 'LK Games',
-      role: 'Indie Game Developer',
+      company: 'Entercom',
+      role: 'Full-stack Javascript Engineer',
       date: {
-        start: '3/2018'
+        start: '7/2019'
+      },
+      techStack: [
+        'Node.js',
+        'Vue.js',
+        'SASS',
+        'Elastic Search',
+        'Postgresql'
+      ],
+      summary: /* markdown */`
+        I help extend and maintain the editorial-facing cms and the user-facing views for Radio.com, a site that gets roughly 15 million monthly visitors.
+
+        Responsibilities include:
+
+        * Extending the backend while keeping a close eye on opportunities for refactoring to keep things DRY.
+        * Building out new cms components to support the editorial team
+        * Finding ways to improve the frontend architecture which is currently a mix of Handlebars, Vue templates, and vanilla js DOM manipulation.
+        * Help with troubleshooting issues in production, which involves error logs and occasionally inspecting the production database for issues.`
+    },
+    {
+      company: 'LK Games',
+      role: 'Independent Game Developer',
+      date: {
+        start: '3/2018',
+        end: '6/2019'
       },
       techStack: [
         'Lua language',
         'Love2d game engine'
       ],
       summary: /*markdown*/`
-        Working on [Citizen of Nowhere](https://lk-games.itch.io/citizen-of-nowhere), an action role playing game.
+        Worked on passion project called [Citizen of Nowhere](https://lk-games.itch.io/citizen-of-nowhere), an action role playing video game.
 
-        Features include:
+        Features I developed:
 
-        * Boids ai behavior for flocking and local avoidance
+        * Custom AI behavior for flocking and local avoidance
+        * Custom Entity Component System for managing game state
         * Procedurally generated items (weapons, consumables, armor...)
-        * Procedurally generated environment and enemy groups
-        * Expansive passive skill tree`
+        * Procedurally generated environment and enemy groups`
     },
     {
       company: 'Independent Contractor',
@@ -84,8 +105,10 @@ export default {
         'BEM'
       ],
       summary: `
-        * Developed and designed core features for initial mvp
-        * Helped define and maintain UI architecture`,
+        Worked with a team of network security researchers to build out an mvp designed to analyze and visualize network traffic.
+
+        * Developed and designed core UI features for initial mvp using React.
+        * Helped define and maintain frontend architecture`,
     },
     {
       company: 'Plastiq',
@@ -141,8 +164,7 @@ export default {
       ],
       responsibilities: [
         'Design and layout of websites using Adobe Illustrator & Photoshop',
-        'HTML/CSS web development',
-        'jQuery and vanilla JS development',
+        'Frontend web development',
       ]
     }
   ],

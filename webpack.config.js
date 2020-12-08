@@ -9,7 +9,7 @@ const config = {
     filename: 'bundle.js',
   },
   devServer: {},
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'cheap-module-source-map',
   module: {
     rules: [
       {

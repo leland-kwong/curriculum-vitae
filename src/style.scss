@@ -11,6 +11,7 @@ body {
 
   @media print {
     font-size: 11px;
+    -webkit-print-color-adjust: exact;
   }
 }
 

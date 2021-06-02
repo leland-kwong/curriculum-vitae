@@ -31,6 +31,7 @@ export default {
       },
       techStack: [
         'Node.js',
+        'Docker',
         'Elastic Search',
         'Postgresql',
         'DynamoDB',

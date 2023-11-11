@@ -92,13 +92,17 @@ const Style = (css = '') => html/*html*/ `
 const Section = (title, content) => {
   const SectionTitle = title
     ? html/*html*/ `
-        <h3 class="SectionTitle Section_${title} ttu f5 normal tracked">
+        <h3
+          class="SectionTitle Section_${title} ttu f5 normal tracked"
+        >
           ${title}
         </h3>
       `
     : ''
   return html/*html*/ `
-    <section class="Section">${SectionTitle} ${content}</section>
+    <section class="Section">
+      ${SectionTitle} ${content}
+    </section>
   `
 }
 
@@ -107,7 +111,9 @@ const WorkDatesSummary = ({ start, end }) => {
   const [m2, y2] = end.split('/')
   const d1 = new Date(`${m1}/01/${y1}`)
   const d2 = new Date(`${m2}/01/${y2}`)
-  const totalMonths = Math.round((d2 - d1) / 1000 / 60 / 60 / 24 / 30)
+  const totalMonths = Math.round(
+    (d2 - d1) / 1000 / 60 / 60 / 24 / 30
+  )
   const years = Math.floor(totalMonths / 12)
   const months = totalMonths % 12
   const yearText = years ? years + ' yr ' : ''
@@ -148,7 +154,9 @@ const WorkExperience = (cvExperienceData) => {
       const ResponsibilitiesList = responsibilities.length
         ? html/*html*/ `
             <ul>
-              ${responsibilities.map((r) => html/*html*/ ` <li>${r}</li> `)}
+              ${responsibilities.map(
+                (r) => html/*html*/ ` <li>${r}</li> `
+              )}
             </ul>
           `
         : ''
@@ -168,15 +176,26 @@ const WorkExperience = (cvExperienceData) => {
       const CompanyNameClasses = 'CompanyName color-inherit'
       const CompanyName = website
         ? html/*html*/ `
-            <a href="${website}" class="${CompanyNameClasses}"> ${company} </a>
+            <a
+              href="${website}"
+              class="${CompanyNameClasses}"
+            >
+              ${company}
+            </a>
           `
-        : html/*html*/ ` <div class="${CompanyNameClasses}">${company}</div> `
+        : html/*html*/ `
+            <div class="${CompanyNameClasses}">
+              ${company}
+            </div>
+          `
       return html/*html*/ `
         <div class="ExperienceBlock ma4 mh0">
           <ul class="ExperienceMeta list pl0">
             <li class="WorkRole ttc b f5">${role}</li>
             <li>${CompanyName}</li>
-            <li class="work-date gray">${WorkDates(date)}</li>
+            <li class="work-date gray">
+              ${WorkDates(date)}
+            </li>
           </ul>
           ${TechStack}
           <div>${marked(trimIndentation(summary))}</div>
@@ -194,7 +213,12 @@ const Education = () =>
     html/*html*/ `
       <ul class="list pl0">
         ${content.education.map(
-          ({ school, degree, years: [yearStart, yearEnd], education }) => {
+          ({
+            school,
+            degree,
+            years: [yearStart, yearEnd],
+            education
+          }) => {
             return html/*html*/ `
               <li class="mb4">
                 <div class="ttc f5 b">${school}</div>
@@ -216,7 +240,10 @@ const Education = () =>
 const OtherInterests = (items = []) => html/*html*/ `
   <ul class="list pl0 flex flex-wrap">
     ${items.map(
-      (item) => html/*html*/ ` <li class="Tag bg-washed-red">${item}</li> `
+      (item) =>
+        html/*html*/ `
+          <li class="Tag bg-washed-red">${item}</li>
+        `
     )}
   </ul>
 `
@@ -224,8 +251,14 @@ const OtherInterests = (items = []) => html/*html*/ `
 const htmlContent = html`
   ${Style(css)} ${Section(null, Header(content))}
   ${Section(null, html/*html*/ `<p>${content.summary}</p>`)}
-  ${Section('experience', WorkExperience(content.experience))}
-  ${Section('interests & hobbies', OtherInterests(content.interestsAndHobbies))}
+  ${Section(
+    'experience',
+    WorkExperience(content.experience)
+  )}
+  ${Section(
+    'interests & hobbies',
+    OtherInterests(content.interestsAndHobbies)
+  )}
   ${Education()}
 `
 

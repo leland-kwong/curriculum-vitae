@@ -20,14 +20,39 @@ export default {
     }
   ],
   summary:
-    'Full-stack engineer focused on building web applications to solve interesting problems. My experience has been mainly frontend with a few years of backend using Nodejs, Postgres, and MongoDB. I have an open interest in working with new programming languages, in particular ones that focus on functional purity and immutability, including Clojure and ReasonML. I believe that React is the best choice for the frontend (unless something better comes along!) and am looking to join a company that is pragmatic, yet open to new ideas and technologies.',
+    'Full-stack engineer expperienced with building complex web applications to solve interesting problems. I have an open interest in working with new programming languages, in particular ones that focus on functional purity and immutability, including Clojure and ReasonML. I believe that React is the best choice for the frontend and would like to join a team that is pragmatic, yet open to new ideas and technologies.',
   coreCompentencies: [],
   experience: [
+    {
+      company: 'Palo Alto Networks',
+      role: 'Principal Frontend Engineer',
+      date: {
+        start: '9/2021'
+      },
+      techStack: [
+        'Typescript',
+        'Node.js',
+        'Next.js',
+        'React',
+        'Figma',
+        'Material UI'
+      ],
+      summary: /* markdown */ `
+        Lead frontend engineer on the SRE team, building tools to help developers and operations teams manage and monitor their services. Responsibilities include:
+
+        * Designed and architected a new frontend platform to help developers manage their services and deployments. Prior to this, there was no unified frontend platform and engineers were manually logging into various cloud platforms, databases, and creating adhoc jenkins jobs.
+        * Simplified various workflows such that engineers and non-technical users can easily manage their services.
+        * Designed a comprehensive design system to help unify the look and feel of the platform.
+        * Built a core set of React components to help developers build new features quickly.
+        * Provided UX mockups, guidance and feedback to the team to help improve the developer experience.
+        * Worked closely with product management and backend engineers to define and implement new features.`
+    },
     {
       company: 'Entercom',
       role: 'Full-stack Software Engineer',
       date: {
-        start: '7/2019'
+        start: '7/2019',
+        end: '8/2021'
       },
       techStack: [
         'Node.js',
@@ -119,7 +144,13 @@ export default {
       },
       summary:
         'As a key member of the UX Engineering team, I was responsible for creating new products to increase user engagement. I worked directly with design and product management to improve user workflows, resulting in designs that reduced cognitive load and simplified the experience for the user.',
-      techStack: ['Angular 1', 'SASS', 'Node.js', 'Gulp', 'Jasmine testing'],
+      techStack: [
+        'Angular 1',
+        'SASS',
+        'Node.js',
+        'Gulp',
+        'Jasmine testing'
+      ],
       responsibilities: []
     },
     {

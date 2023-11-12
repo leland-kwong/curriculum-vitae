@@ -175,19 +175,6 @@ export default {
         'Mentor and assist engineering team on CSS / UX best practices',
         'Collaborate with Project Management, Engineering Team, and Designers'
       ]
-    },
-    {
-      company: 'Freelance web development',
-      role: 'frontend developer',
-      date: {
-        start: '4/2012',
-        end: '5/2013'
-      },
-      techStack: ['jQuery', 'HTML', 'CSS'],
-      responsibilities: [
-        'Design and layout of websites using Adobe Illustrator & Photoshop',
-        'Frontend web development'
-      ]
     }
   ],
   interestsAndHobbies: [

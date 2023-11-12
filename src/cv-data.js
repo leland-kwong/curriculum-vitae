@@ -20,7 +20,7 @@ export default {
     }
   ],
   summary:
-    'Full-stack engineer expperienced with building complex web applications to solve interesting problems. I have an open interest in working with new programming languages, in particular ones that focus on functional purity and immutability, including Clojure and ReasonML. I believe that React is the best choice for the frontend and would like to join a team that is pragmatic, yet open to new ideas and technologies.',
+    'Full-stack engineer experienced with building complex web applications to solve interesting problems. I have an open interest in working with new programming languages, in particular ones that focus on functional purity and immutability, including Clojure and ReasonML. I believe that React is the best choice for the frontend and would like to join a team that is pragmatic, yet open to new ideas and technologies.',
   experience: [
     {
       company: 'Palo Alto Networks',

@@ -11,12 +11,12 @@ export default {
       link: 'https://github.com/Leland-Kwong'
     },
     {
-      desc: 'homepage',
-      link: 'https://lelandkwong.com'
-    },
-    {
       desc: 'linkedIn',
       link: 'https://www.linkedin.com/in/lelandkwong/'
+    },
+    {
+      desc: 'homepage',
+      link: 'https://lelandkwong.com'
     }
   ],
   summary:

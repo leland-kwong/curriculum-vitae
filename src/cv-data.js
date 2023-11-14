@@ -3,7 +3,7 @@ export default {
   title: 'Full-Stack Software Engineer',
   contactInfo: {
     email: 'leland.kwong@gmail.com',
-    phone: '415-326-6018'
+    phone: '702-551-4261'
   },
   webPresence: [
     {

@@ -1,15 +1,11 @@
-import React from 'react'
 import { ContactInfo, WebPresence } from '../data/cv-data'
+import { Spc } from './Space'
 
 interface HeaderProps {
   name: string
   title: string
   contactInfo: ContactInfo
   webPresence: WebPresence[]
-}
-
-function Spc() {
-  return <span>&nbsp;</span>
 }
 
 export function Header({
@@ -28,7 +24,7 @@ export function Header({
       </div>
       <ul className="profile-meta list pa0 ma0">
         <li className="flex flex-row justify-end">
-          <span className="dib tr gray">
+          <span className="dib tr text-slate-600">
             web:
             <Spc />
           </span>
@@ -41,7 +37,7 @@ export function Header({
           </div>
         </li>
         <li className="flex justify-end">
-          <span className="dib tr gray">
+          <span className="dib tr text-slate-600">
             email:
             <Spc />
           </span>
@@ -53,4 +49,3 @@ export function Header({
     </header>
   )
 }
-

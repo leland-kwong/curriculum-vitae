@@ -1,8 +1,7 @@
-import React from 'react';
-import { Education as EducationType } from '../data/cv-data';
+import { Education as EducationType } from '../data/cv-data'
 
 interface EducationProps {
-  education: EducationType[];
+  education: EducationType[]
 }
 
 export function Education({ education }: EducationProps) {
@@ -12,15 +11,16 @@ export function Education({ education }: EducationProps) {
         <li key={index} className="mb4">
           <div className="ttc font-bold">{edu.school}</div>
           <div className="italic">{edu.degree}</div>
-          {edu.education && <div>{edu.education}</div>}
-          {edu.years && <div>
-            <time>{edu.years[0]}</time>
-            <span>-</span>
-            <time>{edu.years[1]}</time>
-          </div>
-          }
+          {edu.years && (
+            <div>
+              <time>{edu.years[0]}</time>
+              <span>-</span>
+              <time>{edu.years[1]}</time>
+            </div>
+          )}
         </li>
       ))}
     </ul>
-  );
+  )
 }
+

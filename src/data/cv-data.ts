@@ -94,7 +94,14 @@ const cvData: CVData = {
         'Docker'
       ],
       summary:
-        'Lead Frontend Engineer on the SRE team, responsible for building tools that empower developers and operations teams to manage and monitor services. Architected a new frontend platform to unify workflows, created a robust React component library, and collaborated with cross-functional teams to deliver high-impact features that streamline service deployment and management.'
+        'Lead Frontend Engineer on the SRE team, responsible for building tools that empower developers and operations teams to manage and monitor services. Architected a new frontend platform to unify workflows, created a robust React component library, and collaborated with cross-functional teams to deliver high-impact features that streamline service deployment and management.',
+      responsibilities: [
+       'created UI mockups in Figma',
+       'designed, architected, and built a greenfield SRE platform',
+       'provide frontend guidance to full-stack engineers',
+       'built a library of reusable foundational components',
+       'integrated a backend mocking system using mock service worker to eliminate the need of a real backend for testing.'
+      ]
     },
     {
       company: 'Entercom (Audacy.com)',

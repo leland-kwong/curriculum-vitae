@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700,900');
-@import 'tachyons/css/tachyons.min.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html,
 body {
@@ -8,8 +10,11 @@ body {
   font-family: 'Source Code Pro', sans-serif;
   line-height: 1.4;
   font-size: 16px;
+}
 
-  @media print {
+@media print {
+  html,
+  body {
     font-size: 11px;
     -webkit-print-color-adjust: exact;
   }
@@ -22,43 +27,41 @@ body {
 }
 
 .SectionTitle {
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
+}
 
-  &:after {
-    content: "";
-    display: block;
-    border-bottom: 2px solid currentColor;
-    padding-bottom: .2em;
-  }
+.SectionTitle:after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid currentColor;
+  padding-bottom: 0.2em;
 }
 
 a {
   color: inherit;
   text-decoration: none;
   position: relative;
+}
 
-  &:after {
-    content: "";
-    position: absolute;
-    top: calc(100% - .1em);
-    left: 0;
-    right: 0;
-    border-bottom: 3px solid rgb(158, 11, 11);
-    opacity: .25;
-  }
+a:after {
+  content: '';
+  position: absolute;
+  top: calc(100% - 0.1em);
+  left: 0;
+  right: 0;
+  border-bottom: 3px solid rgb(158, 11, 11);
+  opacity: 0.25;
 }
 
 .comma-seperated:not(:first-child):before {
-  content: ",";
+  content: ',';
 }
 
 .Tag {
-  @extend .pl2;
-  @extend .pr2;
-  @extend .mr1;
-  @extend .mb1;
+  @apply pr-2 mr-1 mb-1;
 }
 
 .ExperienceBlock {
   break-inside: avoid;
 }
+
